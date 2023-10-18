@@ -99,3 +99,45 @@ with open("LogisticRegression_Model.pkl", "wb") as output:
 # Dumped an ordinal encoder using pickle:
 with open("OrdinalEncoder_Locations.pkl", "wb") as output:
     pickle.dump(encoder, output)
+```
+---
+# Deployment
+- **Load the pickled model for prediction:**
+```python
+with open('LogisticRegression_Model.pkl', 'rb') as file:
+    model = pickle.load(file)
+```
+
+- **Load the pickled ordinal encoder for location encoding:**
+```python
+with open('OrdinalEncoder_Locations.pkl', 'rb') as file:
+    OE = pickle.load(file)
+```
+
+- Using Streamlit, I created an interface that:
+  - Takes input from the user.
+  - Encodes the gender and location upon clicking the "Predict" button.
+  - Predicts whether the customer will churn or not, i.e., if the customer will stay or exit.
+
+---
+## TO RUN:
+
+1. Extract all files in location.
+2. Open a terminal/shell/cmd at that location.
+3. Run command:
+```
+streamlit run .\churn_customer_app.py
+```
+<br>
+
+> **NOTE:** Flask can also be used, but it takes time to design the pages.
+---
+<br>
+
+I am attaching some links and a copy of my resume for your perusal.
+
+- **Portfolio:** [Link](http://omkarbs23.pythonanywhere.com/)
+- **Resume:** [Link](http://omkarbs23.pythonanywhere.com/resume)
+- **LinkedIn:** [Link](https://www.linkedin.com/in/omkarbs23/)
+- **GitHub:** [Link](https://github.com/omkarbs23)
+- **Email:** omkarbs23@gmail.com
